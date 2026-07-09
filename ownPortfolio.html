@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Ecosystem</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body {
+            background-color: #0b0f19;
+            color: #94a3b8;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Fixed Header Glassmorphism Layer */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            z-index: 500;
+        }
+        .nav-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1rem;
+        }
+        .brand-logo {
+            color: #f8fafc;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #38bdf8; }
+
+        /* Block Sectioning Rules */
+        section {
+            min-height: 100vh;
+            padding: 140px 1rem 60px 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .inner-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Hero Framework */
+        .hero-title {
+            color: #f8fafc;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        .accent-text { color: #38bdf8; }
+        
+        /* Project Block Deck Setup */
+        .deck-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .project-card {
+            background-color: #111827;
+            border: 1px solid #1e293b;
+            padding: 2rem;
+            border-radius: 16px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .project-card:hover {
+            border-color: #334155;
+            transform: translateY(-2px);
+        }
+        .project-card h3 {
+            color: #f8fafc;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        /* Custom Button Component */
+        .action-anchor {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0b0f19;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: opacity 0.2s;
+        }
+        .action-anchor:hover { opacity: 0.9; }
+
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="nav-wrapper">
+        <a href="#home" class="brand-logo">Dev.Studio</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="inner-content">
+        <h1 class="hero-title">Building Interactive Frameworks & <span class="accent-text">Clean Interfaces</span>.</h1>
+        <p style="font-size: 1.2rem; max-width: 600px;">Frontend software architecture focused on modern design, semantic layout rules, and fluid cross-device execution.</p>
+        <a href="#projects" class="action-anchor">Explore Deliverables</a>
+    </div>
+</section>
+
+<section id="about" style="background-color: #0e1322;">
+    <div class="inner-content">
+        <h2 style="color:#f8fafc; margin-bottom:1rem;">Core Engineering</h2>
+        <p style="max-width: 700px; font-size: 1.1rem;">
+            I build semantic frontend applications using clean coding architectures[cite: 44]. My approach centers around creating responsive layouts, handling modular states efficiently, and ensuring software looks polished on any screen size.
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="inner-content">
+        <h2 style="color:#f8fafc;">Selected Development Tasks</h2>
+        <div class="deck-wrapper">
+            <div class="project-card">
+                <h3>System Shell Control</h3>
+                <p>Advanced system automation platform using local tracking modules to quickly sort and organize image asset folders.</p>
+            </div>
+            <div class="project-card">
+                <h3>Interactive Metrics Panel</h3>
+                <p>A data matrix interface that securely parses calculations and processes strings using a safe custom processing system.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
